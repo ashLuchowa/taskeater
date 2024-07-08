@@ -3,11 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    <header>
-        <div>logo</div>
-    </header>
+    <div class="container">
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+            <div class="logo-container">TaskEater</div>
+
+            <div class="task-container">
+                <div class="add-task">
+                    <div class="add-task-icon">!</div>
+                    <div class="add-task-title">Add Task</div>
+                </div>
+
+                <div class="task-list-container">
+                    <div class="task-item">
+                        <div class="task-item-icon">!</div>
+                        <div class="task-item-title">All Tasks</div>
+                        <div class="task-item-number">5</div>
+                    </div>
+
+                    <div class="task-item">
+                        <div class="task-item-icon">!</div>
+                        <div class="task-item-title">Today</div>
+                        <div class="task-item-number">1</div>
+                    </div>
+                    
+                    <div class="task-item">
+                        <div class="task-item-icon">!</div>
+                        <div class="task-item-title">Tomorrow</div>
+                        <div class="task-item-number">3</div>
+                    </div>
+
+                    <div class="task-item">
+                        <div class="task-item-icon">!</div>
+                        <div class="task-item-title">Overdue</div>
+                        <div class="task-item-number">2</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-container">
+                <div class="add-project">
+                    <div class="add-project-icon">!</div>
+                    <div class="add-project-title">Add Project</div>
+                </div>
+
+                <div class="project-list-container">
+                    <div class="project-item">
+                        <div class="project-item-icon">!</div>
+                        <div class="project-item-title">Portfolio 2024</div>
+                        <div class="project-item-number">3</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-item-icon">!</div>
+                        <div class="project-item-title">Portfolio 2024</div>
+                        <div class="project-item-number">3</div>
+                    </div>
+
+                    <div class="project-item">
+                        <div class="project-item-icon">!</div>
+                        <div class="project-item-title">Portfolio 2024</div>
+                        <div class="project-item-number">3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAIN-CONTENT -->
+        <div class="main-container">
+            <div class="main-container-header">
+                <div class="header-title">Portfolio 2024</div>
+
+                <div class="header-add-task">
+                    <div class="header-add-task-icon"></div>
+                    <div class="header-add-task-title">Add Task</div>
+                </div>
+
+                <div class="header-para">
+                    <p>I am working on this portfolio which will help me in finding a job.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
