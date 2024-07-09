@@ -2,9 +2,9 @@ import './style.scss';
 import _ from 'lodash';
 
 // Import Functions
-import projectPage from './projectPage.js';
+
+import sideBar from './sideBar.js';
 
 
-// Projects
-
-projectPage();
+//------- SIDEBAR -------//
+sideBar();
