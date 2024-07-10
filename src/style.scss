@@ -60,17 +60,17 @@ $background-sidebar: #ffffff;
     height: 100vh;
     .sidebar {
         background-color: $background-sidebar;
-        .task-container {
-            .add-task {
+        .option-container {
+            .add-option {
                 margin-top: 20px;
                 display: grid;
                 grid-template-columns: 1fr 10fr;
-                .add-task-title {
+                .add-option-title {
                     font-weight: bold;
                 }
             }
-            .task-list-container {
-                .task-item {
+            .option-list-container {
+                .option-item {
                     display: grid;
                     grid-template-columns: 1fr 10fr 1fr;
                 }
