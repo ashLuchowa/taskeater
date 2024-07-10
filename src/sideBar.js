@@ -31,7 +31,7 @@ const sideBar = () => {
     optionListContainer.classList.add('option-list-container');
     optionContainer.appendChild(optionListContainer);
     // Option Item
-    const randomFunction = (optionUnits) => {
+    const createOptionFunction = (optionUnits) => {
         const optionItem = document.createElement('div');
         optionItem.classList.add('option-item');
         optionListContainer.appendChild(optionItem);
@@ -52,10 +52,10 @@ const sideBar = () => {
         optionItemNumber.textContent = 5;
     }
 
+    //-- Project Container --//
+    const projectContainer = document.querySelector('.project-container');
 
-    
-
-    projectPage(randomFunction);
+    projectPage(createOptionFunction);
 }
 
 export default sideBar;

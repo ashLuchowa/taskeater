@@ -1,4 +1,4 @@
-const projectPage = (randomFunction) => {
+const projectPage = (createOptionFunction) => {
     // Option List
     class Options {
         constructor(title, description, dueDate, priority, icon) {
@@ -17,7 +17,7 @@ const projectPage = (randomFunction) => {
     }
 
     Options.optionList.forEach((optionUnits) => {
-        randomFunction(optionUnits);
+        createOptionFunction(optionUnits);
         console.log(optionUnits.title);
     });
 
