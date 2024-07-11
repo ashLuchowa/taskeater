@@ -1,4 +1,4 @@
-const projectPage = (createOptionFunction) => {
+const projectPage = (createOptionFunction, createProjectFunction) => {
     // Option List
     class Options {
         constructor(title, description, dueDate, priority, icon) {
@@ -37,6 +37,11 @@ const projectPage = (createOptionFunction) => {
 
         static projectList = [Projects.project001, Projects.project002, Projects.project003];
     }
+
+    Projects.projectList.forEach((projectUnits) => {
+        createProjectFunction(projectUnits);
+        console.log(projectUnits.title);
+    });
 }
 
 export default projectPage;

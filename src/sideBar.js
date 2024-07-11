@@ -54,8 +54,49 @@ const sideBar = () => {
 
     //-- Project Container --//
     const projectContainer = document.querySelector('.project-container');
+    // Add Project
+    const addProject = document.createElement('div');
+    addProject.classList.add('add-project');
+    // Add Project Icon
+    const addProjectIcon = document.createElement('div');
+    addProjectIcon.classList.add('add-project-icon');
+    addProjectIcon.textContent = '!';
+    // Add Project Title
+    const addProjectTitle = document.createElement('div');
+    addProjectTitle.textContent = 'Add project';
+    addProjectTitle.classList.add('add-project-title');
+    addProject.appendChild(addProjectIcon);
+    addProject.appendChild(addProjectTitle);
+    projectContainer.appendChild(addProject);
+    sideBar.appendChild(projectContainer);
 
-    projectPage(createOptionFunction);
+    // Project List Container
+    const projectListContainer = document.createElement('div');
+    projectListContainer.classList.add('project-list-container');
+    projectContainer.appendChild(projectListContainer);
+    // Project Item
+    const createProjectFunction = (projectUnits) => {
+        const projectItem = document.createElement('div');
+        projectItem.classList.add('project-item');
+        projectListContainer.appendChild(projectItem);
+        // Project Item Icon
+        const projectItemIcon = document.createElement('div');
+        projectItemIcon.classList.add('project-item-icon');
+        projectItem.appendChild(projectItemIcon);
+        projectItemIcon.textContent = '!';
+        // Project Item Title
+        const projectItemTitle = document.createElement('div');
+        projectItemTitle.classList.add('project-item-title');
+        projectItem.appendChild(projectItemTitle);
+        projectItemTitle.textContent = projectUnits.title;
+        // Project Item Number
+        const projectItemNumber = document.createElement('div');
+        projectItemNumber.classList.add('project-item-number');
+        projectItem.appendChild(projectItemNumber);
+        projectItemNumber.textContent = 5;
+    }
+
+    projectPage(createOptionFunction, createProjectFunction);
 }
 
 export default sideBar;
