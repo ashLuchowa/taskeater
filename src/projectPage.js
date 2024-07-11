@@ -1,19 +1,19 @@
 const projectPage = (createOptionFunction, createProjectFunction) => {
     // Option List
     class Options {
-        constructor(title, description, dueDate, priority, icon) {
+        constructor(title, dueDate, icon, number) {
             this.title = title;
-            this.description = description;
             this.dueDate = dueDate;
-            this.priority = priority;
             this.icon = icon;
+            this.number = number;
         }
 
-        static option001 = new Options('Implement skeleton structure', 'Create github repo, clone to desktop, create basic HTML/CSS/JS files.', 'today', '1st', '!');
-        static option002 = new Options('Finish up visual css style', 'Use UI/UX practices to make the website appealing.', 'today', '2nd', '!');
-        static option003 = new Options('Link JavaScript', 'Create fade-in effect when scrolling down.', 'option003', 'today', '1st', '!');
+        static option001 = new Options('All Tasks', '', '!', 5);
+        static option002 = new Options('Today', 'today', '!', 1);
+        static option003 = new Options('Tomorrow', 'tomorrow', '!', 3);
+        static option004 = new Options('Overdue', 'overdue', '!', 2);
 
-        static optionList = [Options.option001, Options.option002, Options.option003];
+        static optionList = [Options.option001, Options.option002, Options.option003, Options.option004];
     }
 
     Options.optionList.forEach((optionUnits) => {

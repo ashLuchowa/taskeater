@@ -49,7 +49,7 @@ const sideBar = () => {
         const optionItemNumber = document.createElement('div');
         optionItemNumber.classList.add('option-item-number');
         optionItem.appendChild(optionItemNumber);
-        optionItemNumber.textContent = 5;
+        optionItemNumber.textContent = optionUnits.number;
     }
 
     //-- Project Container --//
