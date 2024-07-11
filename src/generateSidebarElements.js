@@ -1,5 +1,5 @@
-const projectPage = (createOptionFunction, createProjectFunction) => {
-    // Option List
+const generateSidebarElements = (createOptionFunction, createProjectFunction) => {
+    //-------- Generate Option ---------//
     class Options {
         constructor(title, dueDate, icon, number) {
             this.title = title;
@@ -18,11 +18,10 @@ const projectPage = (createOptionFunction, createProjectFunction) => {
 
     Options.optionList.forEach((optionUnits) => {
         createOptionFunction(optionUnits);
-        console.log(optionUnits.title);
     });
 
 
-    // Project List
+    //-------- Generate Projects ---------//
     class Projects {
         constructor(title, description, task, icon) {
             this.title = title;
@@ -40,8 +39,7 @@ const projectPage = (createOptionFunction, createProjectFunction) => {
 
     Projects.projectList.forEach((projectUnits) => {
         createProjectFunction(projectUnits);
-        console.log(projectUnits.title);
     });
 }
 
-export default projectPage;
+export default generateSidebarElements;

@@ -1,14 +1,14 @@
-import projectPage from './projectPage.js';
+import generateSidebarElements from './generateSidebarElements.js';
 
 const sideBar = () => {
     const sideBar = document.querySelector('.sidebar');
 
-    //-- Logo --//
+    //-------- Logo ---------//
     const logoContainer = document.querySelector('.logo-container');
     logoContainer.textContent = 'TaskEater';
     sideBar.appendChild(logoContainer);
 
-    //-- Option Container --//
+    //-------- Option Container --------//
     const optionContainer = document.querySelector('.option-container');
     // Add Option
     const addOption = document.createElement('div');
@@ -52,7 +52,7 @@ const sideBar = () => {
         optionItemNumber.textContent = optionUnits.number;
     }
 
-    //-- Project Container --//
+    //-------- Project Container --------//
     const projectContainer = document.querySelector('.project-container');
     // Add Project
     const addProject = document.createElement('div');
@@ -96,7 +96,7 @@ const sideBar = () => {
         projectItemNumber.textContent = 5;
     }
 
-    projectPage(createOptionFunction, createProjectFunction);
+    generateSidebarElements(createOptionFunction, createProjectFunction);
 }
 
 export default sideBar;
