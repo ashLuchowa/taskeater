@@ -45,8 +45,8 @@ const generateSidebarElements = (createOptionFunction, createProjectFunction) =>
     });
     
     // Generate Project Pages
-    let target = document.querySelectorAll('.project-list-container');
-    target.forEach(item => {
+    let projectTarget = document.querySelectorAll('.project-list-container');
+    projectTarget.forEach(item => {
         item.addEventListener('click', (e) => {{
             createPageElement(e);
         }})

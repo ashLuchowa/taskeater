@@ -16,6 +16,20 @@ const createPageElement = (e) => {
     headerTitle.classList.add('header-title');
     displayContainerHeader.appendChild(headerTitle);
     headerTitle.textContent = e.target.textContent;
+
+    // Header Add Task
+    const headerAddTask = document.createElement('div');
+    headerAddTask.classList.add('header-add-task');
+    displayContainerHeader.appendChild(headerAddTask);
+    headerAddTask.textContent = 'Add Task';
+
+    // Header Description
+    const headerDescription = document.createElement('div');
+    headerDescription.classList.add('header-description');
+    displayContainerHeader.appendChild(headerDescription);
+    headerDescription.textContent = e.target.textContent;
+
+    console.log(this);
 }
 
 export default createPageElement;
