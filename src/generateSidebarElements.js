@@ -16,7 +16,7 @@ const generateSidebarElements = (createOptionFunction, createProjectFunction) =>
         static optionList = [Options.option001, Options.option002, Options.option003, Options.option004];
     }
 
-    Options.optionList.forEach((optionUnits) => {
+    Options.optionList.forEach(optionUnits => {
         createOptionFunction(optionUnits);
     });
 
@@ -37,7 +37,7 @@ const generateSidebarElements = (createOptionFunction, createProjectFunction) =>
         static projectList = [Projects.project001, Projects.project002, Projects.project003];
     }
 
-    Projects.projectList.forEach((projectUnits) => {
+    Projects.projectList.forEach(projectUnits => {
         createProjectFunction(projectUnits);
     });
 }
