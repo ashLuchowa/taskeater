@@ -1,3 +1,6 @@
+import { forEach } from 'lodash';
+import createPageElement from './createPageElement.js';
+
 const generateSidebarElements = (createOptionFunction, createProjectFunction) => {
     //-------- Generate Option ---------//
     class Options {
@@ -40,6 +43,14 @@ const generateSidebarElements = (createOptionFunction, createProjectFunction) =>
     Projects.projectList.forEach(projectUnits => {
         createProjectFunction(projectUnits);
     });
+    
+    // Generate Project Pages
+    let target = document.querySelectorAll('.project-container');
+    target.forEach(item => {
+        item.addEventListener('click', (e) => {{
+            createPageElement(e);
+        }})
+    })
 }
 
 export default generateSidebarElements;

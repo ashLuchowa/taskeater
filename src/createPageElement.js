@@ -1,8 +1,6 @@
-const createPageElement = () => {
-    //-------- Generate Option Page ---------//
-    // Options.optionList.forEach(optionUnits => {
-    //     generateInfo
-    // });
+const createPageElement = (e) => {
+    //-------- Generate Project Page ---------//
+    console.log(e.target);
 }
 
 export default createPageElement;
