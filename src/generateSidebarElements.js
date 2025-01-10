@@ -23,7 +23,6 @@ const generateSidebarElements = (createOptionFunction, createProjectFunction) =>
         createOptionFunction(optionUnits);
     });
 
-
     //-------- Generate Projects ---------//
     class Projects {
         constructor(title, description, task, icon) {
@@ -41,16 +40,10 @@ const generateSidebarElements = (createOptionFunction, createProjectFunction) =>
     }
 
     Projects.projectList.forEach(projectUnits => {
+        // Generate Project Items
         createProjectFunction(projectUnits);
+        createPageElement(projectUnits);
     });
-    
-    // Generate Project Pages
-    let projectTarget = document.querySelectorAll('.project-list-container');
-    projectTarget.forEach(item => {
-        item.addEventListener('click', (e) => {{
-            createPageElement(e);
-        }})
-    })
 }
 
 export default generateSidebarElements;
